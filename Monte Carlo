@@ -1,0 +1,49 @@
+# Exercise 6B - MonteCarlo - Ryan White
+
+Params:
+10: 
+Points overlapping circle - 8
+generated = 3.2, actual = 3.14159265358979, difference = 0.0584073464102071
+
+100:
+Points overlapping circle - 76
+generated = 3.04, actual = 3.14159265358979, difference = 0.101592653589793
+
+1000:
+Points overlapping circle - 780
+generated = 3.12, actual = 3.14159265358979, difference = 0.021592653589793
+
+10000:
+Points overlapping circle - 7813
+generated = 3.1252, actual = 3.14159265358979, difference = 0.0163926535897931
+
+1. Why do we multiply the value from step 5 above by 4?
+
+You generate random points inside the square in step 4. If I was the number of points
+to come within the circle while X is total number of points
+generated. If the container holding X is gaining, the quantity I/X approximates the 
+ratio of the area of the circle to the square being π/4. Thus using 4*I/X to approximate pi.
+
+2. What do you observe in the output when running your program with parameters of increasing 
+size?
+
+The larger the parameter the closer the difference between generated and actual seems to get.
+
+3.	If you run the program multiple times with the same parameter, does the output remain the 
+same? Why or why not?
+
+Negative. Because the program is intended to throw random points every time.
+
+4. Find a parameter that requires multiple seconds of run time. What is that parameter? 
+How accurate is the estimated value of π?
+
+About two seconds
+10,000,000
+Points overlapping circle - 7853193
+generated = 3.1412772, actual = 3.14159265358979, difference = 0.000315453589792902
+
+5.	Research one other use of Monte-Carlo methods. Record it in your exercise submission and be 
+prepared to discuss it in class.
+
+As a simple example of a Monte Carlo simulation, consider calculating the probability of a 
+particular sum of the throw of two dice (with each die having values one through six).
